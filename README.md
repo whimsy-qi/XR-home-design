@@ -42,10 +42,13 @@ npm install
 npm run dev
 ```
 
-前端默认调用本地后端地址 `http://127.0.0.1:8000` 或 `http://localhost:8000`。
+<img width="1639" height="923" alt="16a0c4c55fb3f29d658cb590f207d359" src="https://github.com/user-attachments/assets/f83ca941-071c-4169-822c-63e34f129a26" />
+<img width="1641" height="921" alt="10ce42a2b2b750280b4c273bc1d7ec40" src="https://github.com/user-attachments/assets/69b7093a-ef49-46dd-8d93-cf376f88c6c3" />
+<img width="1640" height="921" alt="c90e031035148251dbefcb77258d717f" src="https://github.com/user-attachments/assets/affebc30-5451-44ad-9809-9612ce2f7af7" />
+<img width="1641" height="924" alt="f1fec3580eb248a124cd5e9631a7d8c1" src="https://github.com/user-attachments/assets/dc237402-d4b4-4f3a-957e-fcd8c4ee3632" />
+<img width="1638" height="921" alt="78e97c98bd0747ffaa2fefbb21a009a4" src="https://github.com/user-attachments/assets/b75d9268-614d-4b7c-82e1-a2cca682ec8d" />
+<img width="1640" height="917" alt="3278eef64c9143e3971e46282b934344" src="https://github.com/user-attachments/assets/248938f9-cd34-4184-bda9-62a3d4c06675" />
+<img width="1641" height="921" alt="f71da4dddf348d5f8bbbfa89a162e259" src="https://github.com/user-attachments/assets/fc70112a-2610-4a44-9210-30be2316cee2" />
 
-## 仓库说明
 
-- `HomeXR0718.zip` 是本地归档压缩包，体积约 25GB，不适合提交到 GitHub。
-- `.env`、虚拟环境、`node_modules`、构建产物、模型权重和运行时上传文件已通过 `.gitignore` 排除。
-- `vision` 原本包含独立 `.git` 目录，已备份为 `vision/.git-backup-before-root-import/`，根仓库会直接管理前端源码。
+
