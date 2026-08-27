@@ -1,0 +1,49 @@
+# 字节码和缓存文件
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 数据库文件
+db.sqlite3
+*.sqlite3
+
+# 虚拟环境目录 (非常重要！)
+# 避免将整个Python库上传
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# 敏感信息配置文件 (极其重要！)
+# 存放数据库密码、API密钥等
+.env
+.env.*
+*.env
+
+# 静态文件和媒体文件目录
+# 通常由 `collectstatic` 在服务器上生成，不应存入版本库
+/staticfiles/
+/media/
+
+# IDE 和编辑器配置文件
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 日志文件
+*.log
+logs/
+
+# Python 测试和报告
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Celery 临时文件
+*.beat
+
+# Sass/SCSS 缓存
+.sass-cache/

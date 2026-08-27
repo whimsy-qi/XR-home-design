@@ -1,0 +1,6 @@
+# myproject/myproject/__init__.py (或 XRdjangoProject/XRdjangoProject/__init__.py)
+
+# 确保Celery app在Django启动时被加载
+from.celery import app as celery_app
+
+__all__ = ('celery_app',)

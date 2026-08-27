@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <style>
+        /* templates/decor_plan_template.html 的 <style> 标签内 */
+
+@page {
+    size: A4;
+    margin: 1.5cm;
+    /* 定义页脚内容 */
+    @bottom-center {
+        content: "第 " counter(page) " 页";
+        font-size: 10pt;
+        color: #888;
+    }
+}
+
+body {
+    font-family: 'SimSun', 'Microsoft YaHei', sans-serif; /* 使用更通用的中文字体 */
+    line-height: 1.8;
+    font-size: 12pt;
+    color: #34495e;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 24pt;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 11pt;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+main {
+    text-align: justify;
+}
+
+.section {
+    margin-top: 25px;
+}
+
+.image-section {
+    /* 这行代码会强制效果图部分从新的一页开始 */
+    page-break-before: always; 
+}
+
+h2 {
+    font-size: 16pt;
+    color: #2980b9;
+    border-left: 5px solid #3498db;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-top: 0;
+}
+
+.image-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.image-container img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+    position: fixed;
+    bottom: -1cm; /* 将页脚定位到页面可见区域之外，由@bottom-center规则处理 */
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 9pt;
+    color: #95a5a6;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ title }}</h1>
+        <p class="subtitle">由 Vision AI 智能家装专家生成</p>
+    </header>
+
+    <main>
+        {% for section in text_content %}
+        <div class="section">
+            <h2>{{ section.headline }}</h2>
+            <p>{{ section.content|linebreaksbr }}</p> {# 使用linebreaksbr过滤器来保留换行 #}
+        </div>
+        {% endfor %}
+
+        <div class="section image-section">
+            <h2>设计效果图参考</h2>
+            {% for url in image_urls %}
+            <div class="image-container">
+                <img src="{{ url }}" alt="设计效果图参考">
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+
+    <footer>
+        <p>本文档由 Vision Craft 平台生成 | &copy; 2025</p>
+    </footer>
+</body>
+</html>
